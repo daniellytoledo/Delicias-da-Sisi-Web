@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Nossa Casa de Petiscos</title>
+    <link rel="stylesheet" href="styles.css">
+        
+</head>
+<body>
+
+    <!-- Banner -->
+    <div id="banner">
+        <img src="imagens/3.png" alt="Banner do Restaurante">
+    </div>
+
+    <!-- Menu de Navegação -->
+    <div id="menu">
+        <a href="index.html">Home</a>
+        <a href="QuemSomos.html">Quem Somos</a>
+        <a href="menu.html">Menu</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="reservas.html">Reservas</a>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div id="conteudo">
+        <h1 style="color: #D6A700;">Pedido de Reserva</h1>
+        <p><a href="#" id="open-popup">Clique aqui para fazer sua reserva</a></p>
+
+        <!-- Popup para Google Forms -->
+        <div id="myPopup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <iframe src="https://forms.gle/HQ2ekNVoDwXYSfJm8" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+            </div>
+        </div>
+
+        <!-- Vídeo 1 -->
+        
+        <video width="100%" autoplay muted loop playsinline>
+            <source src="imagens/convivio.mp4" type="video/mp4">
+            Seu navegador não suporta o formato de vídeo.
+        </video>
+
+        <!-- Vídeo 2 -->
+       
+        <video width="100%" autoplay muted loop playsinline>
+            <source src="imagens/cozinha.mp4" type="video/mp4">
+            Seu navegador não suporta o formato de vídeo.
+        </video>
+    </div>
+
+    <script>
+        // Script para abrir e fechar o popup
+        var popup = document.getElementById("myPopup");
+        var btn = document.getElementById("open-popup");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            popup.style.display = "flex";
+        }
+
+        span.onclick = function() {
+            popup.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
